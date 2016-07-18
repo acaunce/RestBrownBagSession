@@ -1,0 +1,5 @@
+Z:\Repos\RestApp\RestService\RestDemo.Data\bin\Debug\RestDemo.Data.dll
+Z:\Repos\RestApp\RestService\RestDemo.Data\bin\Debug\RestDemo.Data.pdb
+Z:\Repos\RestApp\RestService\RestDemo.Data\obj\Debug\RestDemo.Data.csprojResolveAssemblyReference.cache
+Z:\Repos\RestApp\RestService\RestDemo.Data\obj\Debug\RestDemo.Data.dll
+Z:\Repos\RestApp\RestService\RestDemo.Data\obj\Debug\RestDemo.Data.pdb

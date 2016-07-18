@@ -1,0 +1,10 @@
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\RestApp.Console.exe.config
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\RestApp.Console.exe
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\RestApp.Console.pdb
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\Newtonsoft.Json.dll
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\RestDemo.Data.dll
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\RestDemo.Data.pdb
+Z:\Repos\RestApp\RestService\RestApp.Console\bin\Debug\Newtonsoft.Json.xml
+Z:\Repos\RestApp\RestService\RestApp.Console\obj\Debug\RestApp.Console.exe
+Z:\Repos\RestApp\RestService\RestApp.Console\obj\Debug\RestApp.Console.pdb
+Z:\Repos\RestApp\RestService\RestApp.Console\obj\Debug\RestApp.Console.csprojResolveAssemblyReference.cache
