@@ -7,15 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <Grid>
+    <StackPanel>
+        <Button Click="Refresh">Refresh</Button>
         <ListView ItemsSource="{Binding Species}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Classification}"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Language}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Favourite, Mode=OneWay}"></GridViewColumn>
+                    <GridViewColumn >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding Path=FavouriteCommand}" CommandParameter="{Binding}">Make Fave</Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-    </Grid>
+    </StackPanel>
 </Window>
