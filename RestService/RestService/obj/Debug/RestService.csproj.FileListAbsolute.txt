@@ -28,3 +28,6 @@ Z:\Repos\RestApp\RestService\RestService\bin\System.Web.Http.WebHost.xml
 Z:\Repos\RestApp\RestService\RestService\obj\Debug\RestService.csprojResolveAssemblyReference.cache
 Z:\Repos\RestApp\RestService\RestService\obj\Debug\RestService.dll
 Z:\Repos\RestApp\RestService\RestService\obj\Debug\RestService.pdb
+Z:\Repos\RestApp\RestService\RestService\bin\System.Web.Cors.dll
+Z:\Repos\RestApp\RestService\RestService\bin\System.Web.Http.Cors.dll
+Z:\Repos\RestApp\RestService\RestService\bin\System.Web.Http.Cors.xml
