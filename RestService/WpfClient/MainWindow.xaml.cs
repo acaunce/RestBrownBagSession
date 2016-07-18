@@ -7,13 +7,11 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -104,68 +102,4 @@ namespace WpfClient
             GetData();
         }
     }
-
-    public class FavouriteCommand : ICommand
-    {
-        private readonly Action _getFaves = null;
-
-        public FavouriteCommand(Action getFaves)
-        {
-            _getFaves = getFaves;
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            using (var client = new HttpClient
-            {
-                BaseAddress = new Uri("http://localhost:50421/"),
-                DefaultRequestHeaders = { Accept = { MediaTypeWithQualityHeaderValue.Parse("application/json") } }
-            })
-            {
-                var row = parameter as SpeciesViewModel;
-                var result = client.PostAsync("favourites", new StringContent(JsonConvert.SerializeObject(new { Name = row.Name }), Encoding.UTF8, "application/json")).Result;
-                row.Favourite = true;
-
-                _getFaves.Invoke();
-            }
-
-        }
-
-        public event EventHandler CanExecuteChanged;
-    }
-
-
-    public class SpeciesViewModel : SwapiSpecies, INotifyPropertyChanged
-    {
-        private bool _favourite;
-        public bool Favourite
-        {
-            get { return _favourite; }
-            set
-            {
-                _favourite = value;
-                OnPropertyChanged();
-            }
-        }
-        public ICommand FavouriteCommand { get; set; }
-
-        public SpeciesViewModel()
-        {
-
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-
 }
