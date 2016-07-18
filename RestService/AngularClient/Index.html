@@ -4,10 +4,26 @@
     <title></title>
     <meta charset="utf-8" />
 </head>
-<body>
+<body ng-app="RestApp" ng-controller="SpeciesController">
     <h1>Star Wars Species</h1>
 
-
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Classification</th>
+            <th>Languate</th>
+            <th>Favourite</th>
+        </tr>
+        <tr ng-repeat="s in Species">
+            <td>{{s.name}}</td>
+            <td>{{s.classification}}</td>
+            <td>{{s.language}}</td>
+            <td>
+                <span ng-show="s.Favourite">Favourited</span>
+                <a ng-click="FavouriteSpecies(s)" ng-hide="s.Favourite" href="">Make Favourite</a>
+            </td>
+        </tr>
+    </table>
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/App.js"></script>
 </body>
