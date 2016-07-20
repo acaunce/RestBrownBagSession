@@ -10,7 +10,24 @@
     <h1>Star Wars Species</h1>
 
     <!-- Code goes in here-->
-
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Classification
+        </th>
+        <th>
+            Language
+        </th>
+    </tr>
+    <tr ng-repeat="s in Species">
+        <td>{{s.name}}</td>
+        <td>{{s.classification}}</td>
+        <td>{{s.language}}</td>
+    </tr>
+</table>
 
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/App.js"></script>
