@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
@@ -17,6 +18,9 @@ namespace RestService
         {
             GlobalConfiguration.Configure(c =>
             {
+                var corsAttr = new EnableCorsAttribute("*", "*", "*");
+                c.EnableCors(corsAttr);
+
                 c.Formatters.Clear();
                 c.Formatters.Add(new JsonMediaTypeFormatter());
                 c.MapHttpAttributeRoutes();

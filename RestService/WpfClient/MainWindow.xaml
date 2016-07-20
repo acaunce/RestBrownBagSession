@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <StackPanel>
+        <Button Click="Refresh">Refresh</Button>
+        <ListView ItemsSource="{Binding Species}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Classification}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Language}"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Favourite, Mode=OneWay}"></GridViewColumn>
+                    <GridViewColumn >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding Path=FavouriteCommand}" CommandParameter="{Binding}">Make Fave</Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

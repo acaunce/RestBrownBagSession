@@ -15,6 +15,5 @@ Z:\Repos\RestApp\RestService\AngularClient\bin\AngularClient.dll
 Z:\Repos\RestApp\RestService\AngularClient\bin\AngularClient.pdb
 Z:\Repos\RestApp\RestService\AngularClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 Z:\Repos\RestApp\RestService\AngularClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-Z:\Repos\RestApp\RestService\AngularClient\obj\Debug\AngularClient.csprojResolveAssemblyReference.cache
 Z:\Repos\RestApp\RestService\AngularClient\obj\Debug\AngularClient.dll
 Z:\Repos\RestApp\RestService\AngularClient\obj\Debug\AngularClient.pdb

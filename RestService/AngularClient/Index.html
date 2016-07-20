@@ -3,33 +3,32 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="Content/ui-bootstrap-csp.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body ng-app="RestDemo" ng-controller="SpeciesController">
+<body ng-app="RestApp" ng-controller="SpeciesController">
     <h1>Star Wars Species</h1>
 
-    <!-- Code goes in here-->
-<table class="table">
-    <tr>
-        <th>
-            Name
-        </th>
-        <th>
-            Classification
-        </th>
-        <th>
-            Language
-        </th>
-    </tr>
-    <tr ng-repeat="s in Species">
-        <td>{{s.name}}</td>
-        <td>{{s.classification}}</td>
-        <td>{{s.language}}</td>
-    </tr>
-</table>
-
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Classification</th>
+            <th>Languate</th>
+            <th>Favourite</th>
+        </tr>
+        <tr ng-repeat="s in Species">
+            <td>{{s.name}}</td>
+            <td>{{s.classification}}</td>
+            <td>{{s.language}}</td>
+            <td>
+                <span ng-show="s.Favourite">Favourited</span>
+                <a ng-click="FavouriteSpecies(s)" ng-hide="s.Favourite" href="">Make Favourite</a>
+            </td>
+        </tr>
+    </table>
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
     <script src="Scripts/App.js"></script>
 </body>
 </html>
